@@ -70,6 +70,21 @@ class InfluxCommunicatorTest {
     }
 
 
+
+    @Test
+    void getValueDateTimeException() {
+
+        Query query = new Query("SELECT * FROM", "iot");
+        QueryResult resultWrongDateTime = influxResult();
+        resultWrongDateTime.getResults().get(0).getSeries().get(0).getValues().set(0, asList("2018-05-08T18:15LALA", 23.5));
+        doReturn(resultWrongDateTime).when(clientMock).query(query);
+
+        String result = sut.getValue(clientMock, "iot", "SELECT * FROM", null);
+
+        assertThat(result).isEqualTo("Something went wrong while parsing a timestamp \uD83E\uDDD0");
+    }
+
+
     private QueryResult influxResult() {
 
         List<Object> values1 = asList("2018-05-08T18:15:30Z", 23.5);
