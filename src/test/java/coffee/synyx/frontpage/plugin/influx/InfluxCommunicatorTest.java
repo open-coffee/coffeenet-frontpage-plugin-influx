@@ -1,5 +1,7 @@
 package coffee.synyx.frontpage.plugin.influx;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import org.influxdb.InfluxDB;
 import org.influxdb.InfluxDBException;
 
@@ -16,6 +18,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
+
+import static java.time.format.DateTimeFormatter.ISO_DATE_TIME;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import static org.mockito.Mockito.doReturn;
@@ -68,9 +72,9 @@ class InfluxCommunicatorTest {
 
     private QueryResult influxResult() {
 
-        List<Object> values1 = asList("2018-05-08T18:15:30", 23.5);
-        List<Object> values2 = asList("2018-05-07T18:15:30", 22.5);
-        List<Object> values3 = asList("2018-05-10T18:15:30", 24.5);
+        List<Object> values1 = asList("2018-05-08T18:15:30Z", 23.5);
+        List<Object> values2 = asList("2018-05-07T18:15:30Z", 22.5);
+        List<Object> values3 = asList("2018-05-10T06:30:00Z", 24.5);
 
         QueryResult.Series series = new QueryResult.Series();
         series.setValues(asList(values1, values2, values3));
