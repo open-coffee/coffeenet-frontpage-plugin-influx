@@ -1,4 +1,4 @@
-package coffee.synyx.frontpage.plugin.influx;
+package rocks.coffeenet.frontpage.plugin.influx;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
