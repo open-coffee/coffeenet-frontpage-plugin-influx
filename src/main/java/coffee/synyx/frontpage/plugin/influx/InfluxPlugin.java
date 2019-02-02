@@ -1,11 +1,5 @@
 package coffee.synyx.frontpage.plugin.influx;
 
-import coffee.synyx.frontpage.plugin.api.ConfigurationDescription;
-import coffee.synyx.frontpage.plugin.api.ConfigurationField;
-import coffee.synyx.frontpage.plugin.api.ConfigurationFieldType;
-import coffee.synyx.frontpage.plugin.api.ConfigurationInstance;
-import coffee.synyx.frontpage.plugin.api.FrontpagePlugin;
-
 import org.influxdb.InfluxDB;
 
 import org.slf4j.Logger;
@@ -13,6 +7,11 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Component;
+import rocks.coffeenet.frontpage.plugin.api.ConfigurationDescription;
+import rocks.coffeenet.frontpage.plugin.api.ConfigurationField;
+import rocks.coffeenet.frontpage.plugin.api.ConfigurationFieldType;
+import rocks.coffeenet.frontpage.plugin.api.ConfigurationInstance;
+import rocks.coffeenet.frontpage.plugin.api.FrontpagePlugin;
 
 import java.lang.invoke.MethodHandles;
 
@@ -21,9 +20,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 
-import static coffee.synyx.frontpage.plugin.api.ConfigurationFieldType.TEXT;
-
 import static org.slf4j.LoggerFactory.getLogger;
+import static rocks.coffeenet.frontpage.plugin.api.ConfigurationFieldType.TEXT;
 
 
 /**

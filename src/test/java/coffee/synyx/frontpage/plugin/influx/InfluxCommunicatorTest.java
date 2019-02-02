@@ -1,32 +1,22 @@
 package coffee.synyx.frontpage.plugin.influx;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import org.influxdb.InfluxDB;
 import org.influxdb.InfluxDBException;
-
 import org.influxdb.dto.Query;
 import org.influxdb.dto.QueryResult;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
 import org.mockito.Mock;
-
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-
-import static java.time.format.DateTimeFormatter.ISO_DATE_TIME;
-import static org.assertj.core.api.Assertions.assertThat;
-
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.doThrow;
-
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.doThrow;
 
 
 /**

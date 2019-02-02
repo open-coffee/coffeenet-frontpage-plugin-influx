@@ -25,9 +25,9 @@
     <dependencies>
         <!--COFFEENET-->
         <dependency>
-            <groupId>coffee.synyx</groupId>
+            <groupId>rocks.coffeenet</groupId>
             <artifactId>frontpage-plugin-api</artifactId>
-            <version>0.6.0</version>
+            <version>0.7.0</version>
         </dependency>
 
         <!--INFLUX-->
